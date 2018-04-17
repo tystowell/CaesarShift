@@ -15,7 +15,7 @@ class caesar_shift_decryption{
     int bestShiftAmount = 0;
     double closestNumber = 100;
     for(int a = 0; a < frequencies.length; a ++){
-      for(int i = 0; i < frequncies.length; i ++){
+      for(int i = 0; i < frequencies.length; i ++){
         frequencies[i] = 0;
       }
       shiftLetters(-a);
@@ -26,7 +26,6 @@ class caesar_shift_decryption{
       for(int i = 0; i < frequencies.length; i ++){
         discrepency += Math.abs(frequencies[i] - estimatedFrequencies[i]);
       }
-      System.out.println(Math.abs(frequencies[0] - estimatedFrequencies[0]));
       if(discrepency < closestNumber){
         closestNumber = discrepency;
         bestShiftAmount = a;
@@ -34,14 +33,14 @@ class caesar_shift_decryption{
       shiftLetters(a);
     }
     System.out.println(bestShiftAmount);
+    shiftLetters(-bestShiftAmount);
     for(int i = 0; i < asciiValues.length; i ++){//Converts to letters
       letters[i] = (char) asciiValues[i];
     }
-    double sum = 0;
-    for(int i = 0; i < estimatedFrequencies.length; i ++){
-      sum += estimatedFrequencies[i];
+    System.out.println("");
+    for(int i = 0; i < letters.length; i ++){
+      System.out.print(letters[i]);
     }
-    System.out.println(sum);
   }
   static void shiftLetters(int num){
     for(int i = 0; i < asciiValues.length; i ++){
