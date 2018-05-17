@@ -1,10 +1,12 @@
 import java.util.*;
 
-class yes{
+class Encryption{
   static int[] asciiValues;
   public static void main(String[] args){
     Scanner reader = new Scanner(System.in);
+    System.out.print("Message to encrypt: ");
     String str = reader.nextLine();
+    System.out.print("Key to shift by (1-95): ");
     int shift = reader.nextInt();
     char[] letters = str.toCharArray();
     asciiValues = new int[letters.length];
