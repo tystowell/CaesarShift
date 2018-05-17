@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Encryption{
+class yes{
   static int[] asciiValues;
   public static void main(String[] args){
     Scanner reader = new Scanner(System.in);
@@ -16,10 +16,10 @@ class Encryption{
     for(int i = 0; i < asciiValues.length; i ++){//Converts to letters
       letters[i] = (char) asciiValues[i];
     }
-    System.out.println("");
     for(int i = 0; i < letters.length; i ++){
       System.out.print(letters[i]);
     }
+    System.out.println("");
   }
   static void shiftLetters(int num){
     for(int i = 0; i < asciiValues.length; i ++){
