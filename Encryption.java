@@ -1,6 +1,6 @@
 import java.util.*;
 
-class caesar_shift_encryption{
+class Encryption{
   static int[] asciiValues;
   public static void main(String[] args){
     Scanner reader = new Scanner(System.in);
